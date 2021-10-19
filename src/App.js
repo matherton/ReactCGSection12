@@ -6,12 +6,11 @@ import "./App.css";
 function App() {
   const [showPara, setShowPara] = useState(false);
   const togglePara = () => {
-    setShowPara(true);
+    setShowPara((prevShowPara) => !prevShowPara);
   };
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      {/*<button onClick={setShowPara(true)}>Reveal</button>*/}
       <Button onClick={togglePara}>Toggle</Button>
       {showPara && <p>This is new!</p>}
     </div>
