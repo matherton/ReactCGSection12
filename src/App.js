@@ -14,7 +14,7 @@ function App() {
     <div className="app">
       <h1>Hi there!</h1>
       <Button onClick={togglePara}>Toggle</Button>
-      <DemoOutput show={false} />
+      <DemoOutput show={showPara} />
     </div>
   );
 }
