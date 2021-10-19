@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
   const [showPara, setShowPara] = useState(false);
+  console.log("App Running!!");
   const togglePara = () => {
     setShowPara((prevShowPara) => !prevShowPara);
   };
