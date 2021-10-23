@@ -16,14 +16,16 @@ function App() {
     }
   }, [allowToggle]);
 
-  const allowToggleHandler = () => {
-    setAllowToggle(true);
-  };
+  const allowToggleHandler = useCallback(() => {
+    setAllowToggle((prevDisable) => !prevDisable);
+  }, []);
 
   return (
     <div className="app">
       <h1>Hi there!</h1>
-      <Button onClick={allowToggleHandler}>Allow toggling</Button>
+      <Button onClick={allowToggleHandler}>
+        {allowToggle ? "Disable toggle" : "Allow toggle"}
+      </Button>
       <Button onClick={togglePara}>Toggle</Button>
       <DemoOutput show={showPara} />
     </div>
